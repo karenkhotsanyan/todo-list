@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
-function App() {
+export default function FullWidthTextField() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Box sx={{ display: 'flex', justifyContent: 'start', minHeight: '100vh', gap: '10px', alignItems: 'center', flexDirection: 'column', p: 4 }}>
+      <Box sx={{ width: 500, maxWidth: '100%', display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <TextField fullWidth label="fullWidth" id="fullWidth" size='small' />
+        <Button variant="contained" endIcon={<SendIcon />}>
+          Add
+        </Button>
+      </Box>
+    </Box>
+
   );
 }
-
-export default App;
